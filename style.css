@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #31CFEE;
+  font-size: 4rem;
+  margin-top: 5%;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+a {
+  color: #31CFEE;
+  font-size: 2rem;
+  text-decoration: none;
+  border: 2px solid #31CFEE;
+  padding: 4px;
+}
+
+.lowScoreDisplay, .currentScoreDisplay {
+  color: #31CFEE;
+  font-size: 2rem;
+  padding: 4px;
+}
+
+body {
+  background: rgb(0, 50, 125);
+}
+
+.container {
+  height: 80vh;
+  display: flex; 
+}
+
+.game {
+  width: 800px;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1500px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background: #1C7CCC;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
